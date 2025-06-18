@@ -7,7 +7,7 @@ const Offers = () => {
     <section id="offers" className="offers improved-section">
       <div className="container">
         <h2>Специальные предложения</h2>
-        <div className="offer-cards">
+        <div className="offer-cards fade-in">
           <OfferCard
             icon={
               <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
