@@ -7,6 +7,9 @@ const Offers = () => {
     <section id="offers" className="offers improved-section">
       <div className="container">
         <h2>Специальные предложения</h2>
+        <p className="offers-desc">
+          Экономьте больше с нашими акциями и бонусами для новых и постоянных клиентов!
+        </p>
         <div className="offer-cards fade-in">
           <OfferCard
             icon={

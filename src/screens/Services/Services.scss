@@ -87,11 +87,38 @@
 
 .services.improved-section {
   background: linear-gradient(120deg, #fff 70%, #fff5f5 100%);
-  box-shadow: 0 4px 32px rgba(187,43,43,0.06);
-  padding: 56px 0 44px 0;
-  margin-bottom: 32px;
+  box-shadow: 0 6px 32px rgba(187,43,43,0.09);
+  padding: 64px 0 52px 0;
+  margin-bottom: 40px;
   text-align: center;
+  border-radius: 18px;
   position: relative;
+  overflow: hidden;
+}
+
+.services.improved-section::before {
+  content: "";
+  position: absolute;
+  left: -80px;
+  top: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, #ffeaea 60%, transparent 100%);
+  z-index: 0;
+}
+
+.services .container {
+  position: relative;
+  z-index: 1;
+}
+
+.services h2 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--main-red);
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 12px #ffeaea;
 }
 
 .services-desc {
@@ -112,41 +139,51 @@
 
 .service-card {
   background: #fff;
-  border: 1.5px solid #ffeaea;
-  border-radius: 16px;
-  padding: 32px 18px 24px 18px;
+  border: 2px solid #ffeaea;
+  border-radius: 20px;
+  padding: 38px 22px 28px 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 2px 12px rgba(187,43,43,0.04);
-  transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
-  min-height: 200px;
+  box-shadow: 0 4px 18px rgba(187,43,43,0.07);
+  transition: box-shadow 0.22s, transform 0.22s, border-color 0.22s;
+  min-height: 210px;
   text-align: center;
   position: relative;
+  cursor: pointer;
+  overflow: hidden;
 }
 
 .service-card:hover {
-  box-shadow: 0 8px 32px rgba(187,43,43,0.10);
+  box-shadow: 0 12px 36px rgba(187,43,43,0.13);
   border-color: var(--main-red);
-  transform: translateY(-4px) scale(1.03);
+  transform: translateY(-6px) scale(1.045);
 }
 
 .service-icon {
-  margin-bottom: 18px;
+  margin-bottom: 22px;
+  filter: drop-shadow(0 2px 8px #ffeaea);
+  transition: filter 0.2s;
+}
+
+.service-card:hover .service-icon {
+  filter: drop-shadow(0 4px 18px #bb2b2b55);
 }
 
 .service-title {
   color: var(--main-red);
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
 }
 
 .service-text {
   color: #a82d2d;
-  font-size: 1rem;
-  opacity: 0.92;
-  line-height: 1.5;
+  font-size: 1.07rem;
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.93;
 }
 
 .fade-in {
@@ -174,5 +211,8 @@
   .services-desc {
     font-size: 1rem;
     margin-bottom: 18px;
+  }
+  .services h2 {
+    font-size: 1.3rem;
   }
 }

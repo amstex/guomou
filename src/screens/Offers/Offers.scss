@@ -19,6 +19,17 @@
   background: radial-gradient(circle, #ffeaea 60%, transparent 100%);
   z-index: 0;
 }
+про
+.offers.improved-section::after {
+  content: "";
+  position: absolute;
+  left: -80px;
+  top: -60px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, #ffeaea 60%, transparent 100%);
+  z-index: 0;
+}
 
 .offers .container {
   position: relative;
@@ -88,6 +99,15 @@
   margin: 0;
   line-height: 1.6;
   opacity: 0.93;
+}
+
+.offers-desc {
+  color: #a82d2d;
+  font-size: 1.13rem;
+  margin-bottom: 32px;
+  margin-top: -10px;
+  text-align: center;
+  opacity: 0.85;
 }
 
 .partners.improved-section {

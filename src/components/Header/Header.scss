@@ -1,0 +1,153 @@
+$primary-color: #BB2B2B;
+$white: #fff;
+$gray-light: #e5e5e5;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: $primary-color;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+  font-family: Arial, sans-serif;
+  position: relative; 
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 0.5rem;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $white;
+      }
+    }
+
+    .nav {
+      display: flex;
+      gap: 1.5rem;
+
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      a {
+        color: $white;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $gray-light;
+        }
+      }
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        background: none;
+        border: none;
+        color: $white;
+        font-size: 1.25rem;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+          color: $gray-light;
+        }
+
+        .cart-count {
+          position: absolute;
+          top: -0.5rem;
+          right: -0.5rem;
+          background-color: $primary-color;
+          color: $white;
+          font-size: 0.75rem;
+          width: 1.25rem;
+          height: 1.25rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .menu {
+        display: none; // скрываем кнопку меню по умолчанию
+      }
+    }
+  }
+
+  .mobile-menu {
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px); // высота минус высота хедера, если нужно
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+
+    nav {
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 1rem;
+
+          a {
+            color: $primary-color;
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: bold;
+
+            &:hover {
+              color: $gray-light;
+            }
+          }
+        }
+      }
+    }
+
+    &.open {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .container {
+      .nav {
+        display: none; // скрываем обычное меню на мобилках
+      }
+
+      .actions {
+        .menu {
+          display: block; // показываем кнопку меню на мобилках
+        }
+      }
+    }
+  }
+}
